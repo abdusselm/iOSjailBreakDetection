@@ -1,4 +1,4 @@
-# iOSjailBreakDetection
+# iOSJailBreakDetection
 
 Bir iOS uygulamasında, uygulamanın çalıştığı cihazda Jailbreak yapılıp yapılmadığının nasıl tespit edileceğine yönelik örnek bir uygulama.
 
