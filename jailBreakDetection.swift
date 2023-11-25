@@ -59,6 +59,7 @@ extension UIDevice{
     var isUsingSuspiciousLibraries: Bool {
         get{
             if JailBrokenHelper.checkDYDL() {return true}
+            if JailBrokenHelper.isFridaRunning() { return true }
             return false
         }
     }
@@ -105,6 +106,29 @@ private struct JailBrokenHelper{
                     return true
                 }
             }
+        }
+        return false
+    }
+
+    static func isFridaRunning() -> Bool {
+        func swapBytesIfNeeded(port: in_port_t) -> in_port_t {
+            let littleEndian = Int(OSHostByteOrder()) == OSLittleEndian
+            return littleEndian ? _OSSwapInt16(port) : port
+        }
+        
+        var serverAddress = sockaddr_in()
+        serverAddress.sin_family = sa_family_t(AF_INET)
+        serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1")
+        serverAddress.sin_port = swapBytesIfNeeded(port: in_port_t(27042))
+        let sock = socket(AF_INET, SOCK_STREAM, 0)
+        
+        let result = withUnsafePointer(to: &serverAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                connect(sock, $0, socklen_t(MemoryLayout<sockaddr_in>.stride))
+            }
+        }
+        if result != -1 {
+            return true
         }
         return false
     }
