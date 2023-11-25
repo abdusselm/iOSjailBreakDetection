@@ -7,7 +7,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         if UIDevice.current.isJailBroken || UIDevice.current.isUsingSuspiciousLibraries{
             let alert = UIAlertController(
                 title: "Uyarı",
-                message: MESSAGE_FOR_JAILBROKEN_DEVICE,
+                message: "Bu uygulama JailBreak yapılmış cihazlarda kullanılamaz.",
                 preferredStyle: UIAlertController.Style.alert)
             let exitAction = UIAlertAction(title: "Çıkış Yap", style: UIAlertAction.Style.default) {
                 UIAlertAction in
