@@ -8,6 +8,8 @@ Bu konuya ilginiz var ise aşağıda ki yazıya bakabilirsiniz.
 
 [iOS-Uygulamarında-Jailbreak-Detection]()
 
+Jailbreak detection için önerdiğiniz bir yöntem var ise PR gönderebilirsiniz.
+
 # iOSJailBreakDetection[EN]
 
 A sample application on how to detect whether an iOS application is jailbroken on the device running the application.
@@ -20,3 +22,5 @@ Things that are checked in the jailBreakDetection.swift file;
 - whether the cydia URL opens
 has been checked.
 In accordance with these checks, a warning window is displayed to the user accordingly in the AppDelegate.swift file.
+
+If you have a method you recommend for jailbreak detection, you can send PR.
