@@ -6,7 +6,7 @@ Bir iOS uygulamasında, uygulamanın çalıştığı cihazda Jailbreak yapılıp
 
 Bu konuya ilginiz var ise aşağıda ki yazıya bakabilirsiniz.
 
-[iOS-Uygulamarında-Jailbreak-Detection]("https://medium.com/@abdusselamkeskin/mobil-güvenlikte-önemli-bir-adım-ios-jailbreak-tespit-rehberi-06998b87926c")
+[iOS-Uygulamarında-Jailbreak-Detection](https://medium.com/@abdusselamkeskin/mobil-güvenlikte-önemli-bir-adım-ios-jailbreak-tespit-rehberi-06998b87926c)
 
 Jailbreak detection için önerdiğiniz bir yöntem var ise PR gönderebilirsiniz.
 
