@@ -14,11 +14,12 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
                 exit(0)
             }
             alert.addAction(exitAction)
-            self.present(alert, animated: true, completion: nil)
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
         }
         else{
             enterTheApplication()
             return true
         }
 #endif
+        return true
     }
